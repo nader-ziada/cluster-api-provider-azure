@@ -189,7 +189,6 @@ spec:
       - /var/lib/etcddisk
     preKubeadmCommands:
     - bash -c /tmp/kubeadm-bootstrap.sh
-    useExperimentalRetryJoin: true
   replicas: ${CONTROL_PLANE_MACHINE_COUNT}
   version: ${KUBERNETES_VERSION}
 ---
@@ -367,7 +366,6 @@ spec:
           name: '{{ ds.meta_data["local_hostname"] }}'
       preKubeadmCommands:
       - bash -c /tmp/kubeadm-bootstrap.sh
-      useExperimentalRetryJoin: true
 ---
 apiVersion: cluster.x-k8s.io/v1alpha4
 kind: MachineHealthCheck

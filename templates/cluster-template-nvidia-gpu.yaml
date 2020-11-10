@@ -110,7 +110,6 @@ spec:
       - /var/lib/etcddisk
     postKubeadmCommands:
     - KUBECONFIG=/etc/kubernetes/admin.conf kubectl apply -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/master/nvidia-device-plugin.yml
-    useExperimentalRetryJoin: true
   replicas: ${CONTROL_PLANE_MACHINE_COUNT}
   version: ${KUBERNETES_VERSION}
 ---
@@ -336,4 +335,3 @@ spec:
       - apt install ubuntu-drivers-common -y
       - ubuntu-drivers install
       - apt install nvidia-container-runtime -y
-      useExperimentalRetryJoin: true

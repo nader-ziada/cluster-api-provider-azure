@@ -5,7 +5,6 @@ metadata:
   name: "${CLUSTER_NAME}-control-plane"
 spec:
   kubeadmConfigSpec:
-    useExperimentalRetryJoin: true
     initConfiguration:
       nodeRegistration:
         kubeletExtraArgs:
@@ -29,7 +28,6 @@ metadata:
 spec:
   template:
     spec:
-      useExperimentalRetryJoin: true
       joinConfiguration:
         nodeRegistration:
           kubeletExtraArgs:

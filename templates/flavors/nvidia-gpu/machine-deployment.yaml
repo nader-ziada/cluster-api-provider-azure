@@ -45,7 +45,6 @@ metadata:
 spec:
   template:
     spec:
-      useExperimentalRetryJoin: true
       preKubeadmCommands:
         # Enable NVIDIA container runtime package repository
         - curl -sL https://nvidia.github.io/nvidia-container-runtime/gpgkey | apt-key add -
